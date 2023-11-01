@@ -1,4 +1,3 @@
-export * from './types';
 export * from './array-help';
 export * from './parsers';
 export * from './primitive';

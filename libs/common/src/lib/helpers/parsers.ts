@@ -1,4 +1,4 @@
-import { Nullable } from "./types";
+import { Nullable } from "../types";
 import { strHelp } from "./str-help";
 import { primitive } from "./primitive";
 

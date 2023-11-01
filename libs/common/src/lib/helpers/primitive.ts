@@ -1,4 +1,4 @@
-import { IsNullish } from "./types";
+import { IsNullish } from "../types";
 
 export type TypeOfName = 'string' | 'number' | 'bigint' | 'boolean' | 'symbol' | 'object' | 'function' | 'undefined';
 
@@ -28,6 +28,7 @@ function assertNotNull<T>(obj: unknown, message?: string): asserts obj is NonNul
   }
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function assertIsArray(obj: unknown, message?: string): asserts obj is any[] {
   if (!Array.isArray(obj)) {
     throw Error(message || "Value was not an array");

@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@hallpass/common": ["libs/common/src/index.ts"],
       "@hallpass/hallpass-ng-shared": [
         "libs/ng/hallpass-ng-shared/src/index.ts"
       ]

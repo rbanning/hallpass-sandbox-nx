@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Nullable, ThemeColor } from '../../../common';
+import { Nullable, ThemeColor } from '@hallpass/common';
 
 @Component({
   selector: 'hallpass-buy-us-a-coffee',

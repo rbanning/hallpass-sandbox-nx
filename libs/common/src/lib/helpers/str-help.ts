@@ -1,4 +1,4 @@
-import { Nullable } from './types';
+import { Nullable } from '../types';
 import { arrayHelp } from "./array-help";
 import { primitive } from "./primitive";
 
