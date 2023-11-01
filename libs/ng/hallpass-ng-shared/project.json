@@ -1,0 +1,38 @@
+{
+  "name": "hallpass-ng-shared",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/ng/hallpass-ng-shared/src",
+  "prefix": "hallpass",
+  "tags": [],
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "options": {
+        "project": "libs/ng/hallpass-ng-shared/ng-package.json",
+        "tailwindConfig": "libs/ng/hallpass-ng-shared/tailwind.config.js"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/ng/hallpass-ng-shared/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/ng/hallpass-ng-shared/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/ng/hallpass-ng-shared/**/*.ts",
+          "libs/ng/hallpass-ng-shared/**/*.html",
+          "libs/ng/hallpass-ng-shared/package.json"
+        ]
+      }
+    }
+  }
+}
