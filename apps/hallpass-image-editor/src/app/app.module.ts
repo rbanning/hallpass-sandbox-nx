@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { CoreModule } from './core';
 import { SharedModule } from './shared';
@@ -11,7 +10,6 @@ import { appRoutes } from './app.routes';
 @NgModule({
   declarations: [AppComponent, pageComponents],
   imports: [
-    BrowserModule,
     RouterModule.forRoot(appRoutes, { initialNavigation: 'enabledBlocking' }),
     CoreModule,
     SharedModule

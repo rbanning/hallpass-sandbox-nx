@@ -1,18 +1,22 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { sharedComponents } from './components';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    sharedComponents
+  ],
   imports: [
-    BrowserModule,
+    CommonModule,
     RouterModule
   ],
   exports: [
-    BrowserModule,
-    RouterModule
+    CommonModule,
+    RouterModule,
+    sharedComponents
   ]
 })
 export class SharedModule { }

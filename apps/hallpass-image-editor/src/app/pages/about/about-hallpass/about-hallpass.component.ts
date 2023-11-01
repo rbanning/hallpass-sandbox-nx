@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'hallpass-header',
-  templateUrl: './header.component.html',
+  selector: 'hallpass-about-hallpass',
+  templateUrl: './about-hallpass.component.html',
   styles: [
     `
       :host {
@@ -11,4 +11,4 @@ import { Component } from '@angular/core';
     `,
   ],
 })
-export class HeaderComponent {}
+export class AboutHallpassComponent {}

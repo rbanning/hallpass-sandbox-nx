@@ -1,9 +1,10 @@
 import { NgModule, Optional, SkipSelf } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 
 import { EnsureModuleLoadedOnceGuard } from './ensure-module-loaded-once.guard';
 import { coreComponents } from './components';
 import { SharedModule } from '../shared';
+import { BrowserModule } from '@angular/platform-browser';
 
 
 
@@ -12,10 +13,14 @@ import { SharedModule } from '../shared';
     coreComponents
   ],
   imports: [
-    CommonModule,
+    BrowserModule,
+    HttpClientModule,
     SharedModule
   ],
   exports: [
+    //these should only be imported into the AppModule
+    BrowserModule,
+    HttpClientModule,
     coreComponents
   ]
 })

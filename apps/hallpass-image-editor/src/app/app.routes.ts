@@ -9,6 +9,11 @@ export const appRoutes: Route[] = [
   },
   
   {
+    path: 'about',
+    loadChildren: () => import('./pages/about/about.module').then(m => m.AboutModule)
+  },
+  
+  {
     path: '**',
     pathMatch: 'full',
     component: NotFoundComponent

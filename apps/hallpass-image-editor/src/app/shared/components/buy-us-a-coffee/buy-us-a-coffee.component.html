@@ -1,0 +1,8 @@
+<span class="inline-flex items-center gap-1">
+  <img *ngIf="imageSize"
+    src="./assets/coffee-cup.png" 
+    class="aspect-square"
+    [width]="imageSize"  
+    alt="cup of coffee"/>
+  <a href="https://www.buymeacoffee.com/hallpassandfriends" target="coffee" [class]="css">{{action}}</a> 
+</span>
