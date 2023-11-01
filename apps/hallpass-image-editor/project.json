@@ -2,7 +2,7 @@
   "name": "hallpass-image-editor",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "prefix": "hallpass-sandbox-nx",
+  "prefix": "hallpass",
   "sourceRoot": "apps/hallpass-image-editor/src",
   "tags": [],
   "targets": {

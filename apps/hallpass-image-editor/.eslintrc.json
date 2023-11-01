@@ -21,7 +21,7 @@
           "error",
           {
             "type": "element",
-            "prefix": "hallpass-sandbox-nx",
+            "prefix": "hallpass",
             "style": "kebab-case"
           }
         ]
