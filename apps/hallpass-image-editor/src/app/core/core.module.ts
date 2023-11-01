@@ -1,8 +1,9 @@
 import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
 import { EnsureModuleLoadedOnceGuard } from './ensure-module-loaded-once.guard';
 import { coreComponents } from './components';
-import { SharedModule } from '@hallpass-image-editor/shared/shared.module';
+import { SharedModule } from '../shared';
 
 
 
@@ -13,6 +14,9 @@ import { SharedModule } from '@hallpass-image-editor/shared/shared.module';
   imports: [
     CommonModule,
     SharedModule
+  ],
+  exports: [
+    coreComponents
   ]
 })
 export class CoreModule extends EnsureModuleLoadedOnceGuard {    // Ensure that CoreModule is only loaded into AppModule
