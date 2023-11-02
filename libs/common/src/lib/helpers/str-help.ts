@@ -242,6 +242,36 @@ export const strHelp = {
     return slugify(title);
   },
 
+  fromError(error: unknown, defaultMessage: string = 'Unknown Error'): string {
+    if (!error) { return defaultMessage; }
+    switch(typeof(error)) {
+      case 'string':
+        return error;
+      case 'object': {
+        if (primitive.isArray(error)) {
+          const messages = error
+            .map(e => {return this.fromError(e, '')}) //NOTE: no default messages
+            .filter(Boolean); //remove falsy (empty) items
+          
+          //add the default message if we were not able to extract any from error
+          if (messages.length === 0) { messages.push(defaultMessage); }
+          
+          return this.combine(...messages).with('; ');  //join all of the error messages into one string
+        }
+        //else
+        const messages = ['message', 'statusText']
+          .map((prop: string) => {
+            return (prop in error) ? this.fromError((error as {[key: string]: unknown})[prop], '') : '';
+          })
+          .filter(Boolean); //remove falsy (empty) items
+
+        const message = arrayHelp.first<string>(messages);
+        return message ?? error.toString();
+      }
+      default:
+        return defaultMessage;
+    }
+  },
 
   percentEqualLevenshtein(s1: string, s2: string, ignoreCase: boolean = false) {
     if (primitive.isNullish(s1) || primitive.isNullish(s2)) { throw new Error("One or more string params is null(ish)"); }

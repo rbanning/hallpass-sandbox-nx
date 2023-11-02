@@ -1,1 +1,23 @@
-<p>home works!</p>
+<div class="section">
+  <h1>Remove Background</h1>
+  <div class="mt-8 font-semibold text-secondary">Select a Photo</div>
+  <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+    <button class="" *ngFor="let item of images" (click)="process(item)">
+      <img [src]="item" alt="photo" class="aspect-square w-20" />
+    </button>
+  </div>
+
+  <div class="my-8" *ngIf="error">
+    <hallpass-shared-error-block heading="Error Processing the Photo">
+      <div>{{error}}</div>
+    </hallpass-shared-error-block>
+  </div>
+  
+  <div class="my-8" *ngIf="result">
+    <strong>Result: </strong>
+    <span>{{result}}</span>
+  </div>
+
+  
+  
+</div>

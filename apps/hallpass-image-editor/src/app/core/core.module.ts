@@ -1,10 +1,10 @@
 import { NgModule, Optional, SkipSelf } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
-import { EnsureModuleLoadedOnceGuard } from './ensure-module-loaded-once.guard';
+import { EnsureModuleLoadedOnceGuard, HallpassNgCoreModule, coreComponents as hallpassCoreComponents } from '@hallpass/hallpass-ng-core';
 import { coreComponents } from './components';
 import { SharedModule } from '../shared';
-import { BrowserModule } from '@angular/platform-browser';
 
 
 
@@ -15,12 +15,14 @@ import { BrowserModule } from '@angular/platform-browser';
   imports: [
     BrowserModule,
     HttpClientModule,
+    HallpassNgCoreModule,
     SharedModule
   ],
   exports: [
     //these should only be imported into the AppModule
     BrowserModule,
     HttpClientModule,
+    hallpassCoreComponents,
     coreComponents
   ]
 })

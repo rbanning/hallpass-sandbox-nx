@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@hallpass/common": ["libs/common/src/index.ts"],
+      "@hallpass/hallpass-ng-core": ["libs/ng/hallpass-ng-core/src/index.ts"],
       "@hallpass/hallpass-ng-shared": [
         "libs/ng/hallpass-ng-shared/src/index.ts"
       ]
