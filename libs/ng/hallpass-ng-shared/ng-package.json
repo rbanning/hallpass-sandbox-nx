@@ -3,5 +3,6 @@
   "dest": "../../../dist/libs/ng/hallpass-ng-shared",
   "lib": {
     "entryFile": "src/index.ts"
-  }
+  },
+  "assets": ["./assets"]
 }

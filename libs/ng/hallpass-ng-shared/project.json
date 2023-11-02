@@ -33,6 +33,37 @@
           "libs/ng/hallpass-ng-shared/package.json"
         ]
       }
+    },
+    "storybook": {
+      "executor": "@storybook/angular:start-storybook",
+      "options": {
+        "port": 4400,
+        "configDir": "libs/ng/hallpass-ng-shared/.storybook",
+        "browserTarget": "hallpass-ng-shared:build-storybook",
+        "compodoc": false,
+        "styles": ["libs/ng/hallpass-ng-shared/.storybook/tailwind-imports.scss"]
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@storybook/angular:build-storybook",
+      "outputs": ["{options.outputDir}"],
+      "options": {
+        "outputDir": "dist/storybook/hallpass-ng-shared",
+        "configDir": "libs/ng/hallpass-ng-shared/.storybook",
+        "browserTarget": "hallpass-ng-shared:build-storybook",
+        "compodoc": false,
+        "styles": ["libs/ng/hallpass-ng-shared/.storybook/tailwind-imports.scss"]
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
     }
   }
 }
