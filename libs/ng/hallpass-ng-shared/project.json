@@ -2,7 +2,7 @@
   "name": "hallpass-ng-shared",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/ng/hallpass-ng-shared/src",
-  "prefix": "hallpass",
+  "prefix": "hallpass-shared",
   "tags": [],
   "projectType": "library",
   "targets": {

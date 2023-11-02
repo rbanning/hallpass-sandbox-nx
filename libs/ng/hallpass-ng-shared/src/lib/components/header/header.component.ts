@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'hallpass-header',
+  selector: 'hallpass-shared-header',
   templateUrl: './header.component.html',
   styles: [
     `
@@ -11,4 +11,6 @@ import { Component } from '@angular/core';
     `,
   ],
 })
-export class HeaderComponent {}
+export class HeaderComponent {
+
+}

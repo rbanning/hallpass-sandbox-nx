@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'hallpass-about-hallpass',
+  selector: 'hallpass-shared-about-hallpass',
   templateUrl: './about-hallpass.component.html',
   styles: [
     `

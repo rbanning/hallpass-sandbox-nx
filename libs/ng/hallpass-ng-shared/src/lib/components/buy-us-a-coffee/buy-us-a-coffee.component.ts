@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Nullable, ThemeColor } from '@hallpass/common';
 
 @Component({
-  selector: 'hallpass-buy-us-a-coffee',
+  selector: 'hallpass-shared-buy-us-a-coffee',
   templateUrl: './buy-us-a-coffee.component.html',
   styles: [],
 })
